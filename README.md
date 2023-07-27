@@ -1,5 +1,7 @@
 # postman-requests
-
+You need only to follow this steps in postman to test request :
+    1-Go to environment and create new variable named "hopePath" that continent "http://localhost/       REPLACE-YOUR-PATH-TO-APP/public/api/v1"
+    2-Enjoy Testing !
 
 
 ## Getting started
