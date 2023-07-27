@@ -1,0 +1,313 @@
+{
+	"info": {
+		"_postman_id": "8094b97a-6421-4c75-acb3-a37e843eb1cb",
+		"name": "Hop Crm Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Contact",
+			"item": [
+				{
+					"name": "List Contacts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hopePath}}/contact?currentPage=1&itemPerPage=5",
+							"host": [
+								"{{hopePath}}"
+							],
+							"path": [
+								"contact"
+							],
+							"query": [
+								{
+									"key": "currentPage",
+									"value": "1"
+								},
+								{
+									"key": "itemPerPage",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Contact ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hopePath}}/contact/show/35",
+							"host": [
+								"{{hopePath}}"
+							],
+							"path": [
+								"contact",
+								"show",
+								"35"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Contact",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"organisation_id\"  : 16,\r\n    \"cle\"              : \"bcc9cc70c5f351f4b8cdae4fb2bcf259\",\r\n    \"e_mail\"           : \"elodie.bouchet@tele2.com\",\r\n    \"nom\"              : \"abde\",\r\n    \"prenom\"           : \"llah\",\r\n    \"telephone_fixe\"   : \"0733188380\",\r\n    \"service\"          : \"\",\r\n    \"fonction\"         : \"Feutier\",\r\n    \"created_at\"       : \"2022-09-01 12:25:04\",\r\n    \"updated_at\"       : \"2022-09-01 12:25:04\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hopePath}}/contact/store",
+							"host": [
+								"{{hopePath}}"
+							],
+							"path": [
+								"contact",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Contact ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cle\"              : \"6b68c6f7fe7cd261a1965af06381de34\",\r\n    \"e_mail\"           : \"elodie.bouchet@tele22.com\",\r\n    \"nom\"              : \"abde\",\r\n    \"prenom\"           : \"llah\",\r\n    \"telephone_fixe\"   : \"0733188380\",\r\n    \"service\"          : \"\",\r\n    \"fonction\"         : \"edit-function\", \r\n    \"updated_at\"       : \"2022-09-01 12:25:04\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hopePath}}/contact/update/35",
+							"host": [
+								"{{hopePath}}"
+							],
+							"path": [
+								"contact",
+								"update",
+								"35"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Contact ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{hopePath}}/contact/destroy/35",
+							"host": [
+								"{{hopePath}}"
+							],
+							"path": [
+								"contact",
+								"destroy",
+								"35"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "is Organisation Already Exist With The Same Name Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nom\"           : \"abde\",\r\n    \"prenom\"        : \"llah\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hopePath}}/contact/isAlreadyExist",
+							"host": [
+								"{{hopePath}}"
+							],
+							"path": [
+								"contact",
+								"isAlreadyExist"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Organisation",
+			"item": [
+				{
+					"name": "List organisations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hopePath}}/organisation?currentPage=5&itemPerPage=5",
+							"host": [
+								"{{hopePath}}"
+							],
+							"path": [
+								"organisation"
+							],
+							"query": [
+								{
+									"key": "currentPage",
+									"value": "5"
+								},
+								{
+									"key": "itemPerPage",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show organisation ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hopePath}}/organisation/show/1",
+							"host": [
+								"{{hopePath}}"
+							],
+							"path": [
+								"organisation",
+								"show",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Organisation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cle\"           : \"f713ab4d886839308ed6064b1d23c159\",\r\n    \"nom\"           : \"Leveque\",\r\n    \"adresse\"       : \"50, Marrakech\",\r\n    \"code_postal\"   : \"11076\",\r\n    \"ville\"         : \"Marrakech\",\r\n    \"statut\"        : \"LEAD\",\r\n    \"created_at\"    : \"2023-11-26 00:08:19\",\r\n    \"updated_at\"    : \"2023-02-10 10:09:46\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hopePath}}/organisation/store",
+							"host": [
+								"{{hopePath}}"
+							],
+							"path": [
+								"organisation",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Organisation ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cle\"           : \"f713ab4d886839308ed6064b1d23c159\",\r\n    \"nom\"           : \"Leveque\",\r\n    \"adresse\"       : \"50, Marrakech\",\r\n    \"code_postal\"   : \"11076\",\r\n    \"ville\"         : \"Marrakech\",\r\n    \"statut\"        : \"LEAD\",\r\n    \"updated_at\"    : \"2023-02-10 10:09:46\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hopePath}}/organisation/update/35",
+							"host": [
+								"{{hopePath}}"
+							],
+							"path": [
+								"organisation",
+								"update",
+								"35"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Organisation ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{hopePath}}/organisation/destroy/35",
+							"host": [
+								"{{hopePath}}"
+							],
+							"path": [
+								"organisation",
+								"destroy",
+								"35"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "is Organisation Already Exist With The Same Name",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nom\"           : \"Leveque\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hopePath}}/organisation/isAlreadyExist",
+							"host": [
+								"{{hopePath}}"
+							],
+							"path": [
+								"organisation",
+								"isAlreadyExist"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
