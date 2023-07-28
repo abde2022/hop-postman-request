@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "8094b97a-6421-4c75-acb3-a37e843eb1cb",
 		"name": "Hop Crm Test",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
 		{
@@ -14,7 +14,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{hopePath}}/contact?currentPage=1&itemPerPage=5",
+							"raw": "{{hopePath}}/contact?currentPage=&itemPerPage=",
 							"host": [
 								"{{hopePath}}"
 							],
@@ -24,11 +24,11 @@
 							"query": [
 								{
 									"key": "currentPage",
-									"value": "1"
+									"value": ""
 								},
 								{
 									"key": "itemPerPage",
-									"value": "5"
+									"value": ""
 								}
 							]
 						}
@@ -40,17 +40,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": {
-							"raw": "{{hopePath}}/contact/show/35",
-							"host": [
-								"{{hopePath}}"
-							],
-							"path": [
-								"contact",
-								"show",
-								"35"
-							]
-						}
+						"url": "{{hopePath}}/contact/show/35"
 					},
 					"response": []
 				},
@@ -68,16 +58,7 @@
 								}
 							}
 						},
-						"url": {
-							"raw": "{{hopePath}}/contact/store",
-							"host": [
-								"{{hopePath}}"
-							],
-							"path": [
-								"contact",
-								"store"
-							]
-						}
+						"url": "{{hopePath}}/contact/store"
 					},
 					"response": []
 				},
@@ -95,17 +76,7 @@
 								}
 							}
 						},
-						"url": {
-							"raw": "{{hopePath}}/contact/update/35",
-							"host": [
-								"{{hopePath}}"
-							],
-							"path": [
-								"contact",
-								"update",
-								"35"
-							]
-						}
+						"url": "{{hopePath}}/contact/update/35"
 					},
 					"response": []
 				},
@@ -114,17 +85,7 @@
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"url": {
-							"raw": "{{hopePath}}/contact/destroy/35",
-							"host": [
-								"{{hopePath}}"
-							],
-							"path": [
-								"contact",
-								"destroy",
-								"35"
-							]
-						}
+						"url": "{{hopePath}}/contact/destroy/35"
 					},
 					"response": []
 				},
@@ -142,16 +103,7 @@
 								}
 							}
 						},
-						"url": {
-							"raw": "{{hopePath}}/contact/isAlreadyExist",
-							"host": [
-								"{{hopePath}}"
-							],
-							"path": [
-								"contact",
-								"isAlreadyExist"
-							]
-						}
+						"url": "{{hopePath}}/contact/isAlreadyExist"
 					},
 					"response": []
 				}
@@ -192,17 +144,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": {
-							"raw": "{{hopePath}}/organisation/show/1",
-							"host": [
-								"{{hopePath}}"
-							],
-							"path": [
-								"organisation",
-								"show",
-								"1"
-							]
-						}
+						"url": "{{hopePath}}/organisation/show/1"
 					},
 					"response": []
 				},
@@ -220,16 +162,7 @@
 								}
 							}
 						},
-						"url": {
-							"raw": "{{hopePath}}/organisation/store",
-							"host": [
-								"{{hopePath}}"
-							],
-							"path": [
-								"organisation",
-								"store"
-							]
-						}
+						"url": "{{hopePath}}/organisation/store"
 					},
 					"response": []
 				},
@@ -247,17 +180,7 @@
 								}
 							}
 						},
-						"url": {
-							"raw": "{{hopePath}}/organisation/update/35",
-							"host": [
-								"{{hopePath}}"
-							],
-							"path": [
-								"organisation",
-								"update",
-								"35"
-							]
-						}
+						"url": "{{hopePath}}/organisation/update/35"
 					},
 					"response": []
 				},
@@ -266,17 +189,7 @@
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"url": {
-							"raw": "{{hopePath}}/organisation/destroy/35",
-							"host": [
-								"{{hopePath}}"
-							],
-							"path": [
-								"organisation",
-								"destroy",
-								"35"
-							]
-						}
+						"url": "{{hopePath}}/organisation/destroy/35"
 					},
 					"response": []
 				},
@@ -294,16 +207,48 @@
 								}
 							}
 						},
+						"url": "{{hopePath}}/organisation/isAlreadyExist"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Contact - Organisation",
+			"item": [
+				{
+					"name": "List Contact Organisation",
+					"request": {
+						"method": "GET",
+						"header": [],
 						"url": {
-							"raw": "{{hopePath}}/organisation/isAlreadyExist",
+							"raw": "{{hopePath}}/contact-organisation?currentPage=&itemPerPage=",
 							"host": [
 								"{{hopePath}}"
 							],
 							"path": [
-								"organisation",
-								"isAlreadyExist"
+								"contact-organisation"
+							],
+							"query": [
+								{
+									"key": "currentPage",
+									"value": ""
+								},
+								{
+									"key": "itemPerPage",
+									"value": ""
+								}
 							]
 						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Contact ID With Organisation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{hopePath}}/contact-organisation/333"
 					},
 					"response": []
 				}
